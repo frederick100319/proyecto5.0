@@ -1,0 +1,21 @@
+img {
+    width: 120px;
+    height: 50px;
+}
+.navbar{
+    background-color: var(--bs-dark);
+}
+
+.sesion{
+    height: 50px;
+    font-size: small;
+    text-align: left;
+    color: rgb(101, 248, 248);
+}
+.sesion:hover{
+    color: white;
+}
+button, .navbar-toggler-icon{
+
+    background-color: rgb(101, 248, 248);
+}

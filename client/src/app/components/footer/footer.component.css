@@ -1,0 +1,14 @@
+span{
+    font-weight: bold;
+}
+iframe{
+    width: 25em;
+    height: 10em;
+}
+li, a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgb(101, 248, 248);
+}

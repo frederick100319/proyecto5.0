@@ -1,1 +1,27 @@
-<p>product-list works!</p>
+<!-- product-list.component.html -->
+
+<div class="container">
+    <div *ngIf="loading; else content">
+      Cargando productos...
+    </div>
+    <ng-template #content>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let producto of productos">
+          <div class="card mb-4">
+            <img [src]="producto.fotourl" class="card-img-top" alt="{{ producto.nombre }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <p class="card-text">{{ producto.descripcion }}</p>
+              <p class="card-text">Stock: {{ producto.stock }}</p>
+              <p class="card-text">Categoría: {{ producto.categoria.nombre }}</p>
+              <p class="card-text">ID: {{ producto.id_producto }}</p>
+              <p class="card-text">Factura ID: {{ producto.facturaCompraProductos[0].id_factura_producto }}</p>
+              <p class="card-text">Precio de venta: {{ producto.facturaCompraProductos[0].precio_venta }}</p>
+              <!-- Agrega más campos según la estructura de tu Producto -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  
